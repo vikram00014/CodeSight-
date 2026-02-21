@@ -1,7 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "installCommand": "npm --prefix codesight-app install",
-  "buildCommand": "npm --prefix codesight-app run build",
-  "devCommand": "npm --prefix codesight-app run dev"
-}
