@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090f;
+  --foreground: #f4f4f5;
+  --surface: #11121a;
+  --surface-soft: #171923;
+  --border: #272a36;
+  --accent: #34d399;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #09090f;
+    --foreground: #f4f4f5;
+  }
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(52, 211, 153, 0.14), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(59, 130, 246, 0.12), transparent 28%),
+    linear-gradient(180deg, #09090f 0%, #0b0c12 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Inter", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.codesight-current-line {
+  background: rgba(52, 211, 153, 0.16);
+}
+
+.codesight-error-line {
+  background: rgba(244, 63, 94, 0.2);
+}
+
+button,
+select,
+input,
+textarea {
+  font-size: 14px;
+}
