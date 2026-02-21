@@ -1,9 +1,19 @@
 {
+  "name": "codesight-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix codesight-app run dev",
+    "build": "npm --prefix codesight-app run build",
+    "start": "npm --prefix codesight-app run start"
+  },
   "dependencies": {
+    "next": "16.1.6",
     "@monaco-editor/react": "^4.7.0",
     "d3": "^7.9.0",
     "framer-motion": "^12.34.3",
     "lz-string": "^1.5.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "reactflow": "^11.11.4",
     "zustand": "^5.0.11"
   }
