@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeSight App
 
-## Getting Started
+Interactive execution visualizer for Python (Pyodide in browser) with timeline stepping, stack/heap views, DSA visualization, and run recap metrics.
 
-First, run the development server:
+## Local Development
+
+Install and run:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Deploy to Vercel (Recommended)
 
-To learn more about Next.js, take a look at the following resources:
+If this folder is the project root in Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Framework Preset: **Next.js**
+- Install Command: `npm install`
+- Build Command: `npm run build`
+- Output: default Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+If deploying from parent monorepo repo:
 
-## Deploy on Vercel
+- Set **Root Directory** to `codesight-app`
+- Keep same install/build commands (they run inside `codesight-app`)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- No backend server required for current Python visualization flow.
+- C++ mode in UI is scaffold-only unless a separate execution backend is added.
