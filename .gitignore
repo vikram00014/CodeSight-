@@ -1,6 +1,7 @@
 # Root workspace artifacts
 node_modules/
 .qodo/
+codesight-app/.git_disabled/
 
 # OS/editor noise
 .DS_Store
